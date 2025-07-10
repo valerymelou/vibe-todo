@@ -3,7 +3,9 @@
 <!-- Use this file to provide workspace-specific custom instructions to Copilot. For more details, visit https://code.visualstudio.com/docs/copilot/copilot-customization#_use-a-githubcopilotinstructionsmd-file -->
 
 ## Project Overview
+
 This is a modern Angular 20 todo application built with:
+
 - **Angular 20** with zoneless architecture (no zone.js)
 - **Standalone components** (no NgModules)
 - **Tailwind CSS 4.0** for styling
@@ -13,6 +15,7 @@ This is a modern Angular 20 todo application built with:
 ## Coding Guidelines
 
 ### Angular Best Practices
+
 - Use standalone components with `standalone: true`
 - Prefer signals over traditional reactive patterns when possible
 - Use the new control flow syntax (`@if`, `@for`, `@switch`) instead of structural directives
@@ -20,6 +23,7 @@ This is a modern Angular 20 todo application built with:
 - Use dependency injection with `inject()` function where appropriate
 
 ### Tailwind CSS Guidelines
+
 - Use Tailwind CSS 4.0 utility classes for styling
 - Prefer utility-first approach over custom CSS
 - Use responsive design classes (`sm:`, `md:`, `lg:`, `xl:`)
@@ -27,6 +31,7 @@ This is a modern Angular 20 todo application built with:
 - Use semantic color names and maintain consistent spacing
 
 ### Code Structure
+
 - Keep components small and focused on single responsibilities
 - Use services for business logic and data management
 - Implement proper error handling and loading states
@@ -34,7 +39,9 @@ This is a modern Angular 20 todo application built with:
 - Use Angular's built-in features like forms, routing, and HTTP client
 
 ### Todo App Features
+
 The app should include:
+
 - Add, edit, delete, and toggle todo items
 - Filter todos by status (all, active, completed)
 - Mark all as complete/incomplete
@@ -44,6 +51,7 @@ The app should include:
 - Clean, modern UI with smooth animations
 
 ## Development Notes
+
 - The project uses the latest Angular CLI and follows current best practices
 - All components should be properly tested
 - Code should be well-documented and maintainable
