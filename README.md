@@ -80,6 +80,7 @@ The app will be available at `https://yourusername.github.io/vibe-todo/`
 ### Manual Deployment
 
 1. Build for production:
+
    ```bash
    yarn build:prod
    ```
@@ -98,6 +99,7 @@ The app will be available at `https://yourusername.github.io/vibe-todo/`
 ## 🌙 Dark Mode
 
 The app supports three theme modes:
+
 - **Light** - Traditional light theme
 - **Dark** - Dark theme for low-light environments
 - **System** - Automatically follows your system preference
@@ -105,6 +107,7 @@ The app supports three theme modes:
 ## 📱 Responsive Design
 
 The app is fully responsive and works beautifully on:
+
 - 📱 Mobile devices
 - 📱 Tablets
 - 💻 Desktop computers
