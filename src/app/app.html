@@ -1,75 +1,51 @@
 <!-- Main Todo App Container -->
 <div class="min-h-screen bg-gray-50 py-8">
-  <div class="max-w-2xl mx-auto px-4">
+  <div class="max-w-4xl mx-auto px-4">
     <!-- Header -->
     <div class="text-center mb-8">
-      <h1 class="text-4xl font-bold text-gray-900 mb-2">Vibe Todo</h1>
-      <p class="text-gray-600">Stay organized and productive</p>
-    </div>
-    
-    <!-- Stats Display (for testing) -->
-    <div class="bg-white rounded-lg shadow-sm p-6 mb-6">
-      <h2 class="text-lg font-semibold text-gray-900 mb-4">Stats</h2>
-      <div class="grid grid-cols-3 gap-4">
-        <div class="text-center">
-          <div class="text-2xl font-bold text-blue-600">{{ stats().total }}</div>
-          <div class="text-sm text-gray-600">Total</div>
-        </div>
-        <div class="text-center">
-          <div class="text-2xl font-bold text-orange-600">{{ stats().active }}</div>
-          <div class="text-sm text-gray-600">Active</div>
-        </div>
-        <div class="text-center">
-          <div class="text-2xl font-bold text-green-600">{{ stats().completed }}</div>
-          <div class="text-sm text-gray-600">Completed</div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Current Filter Display -->
-    <div class="bg-white rounded-lg shadow-sm p-4 mb-6">
-      <p class="text-sm text-gray-600">
-        Current filter: <span class="font-semibold text-gray-900">{{ filter() }}</span>
-      </p>
-    </div>
-    
-    <!-- Todos List (for testing) -->
-    <div class="bg-white rounded-lg shadow-sm p-6">
-      <h2 class="text-lg font-semibold text-gray-900 mb-4">Todos</h2>
+      <h1 class="text-5xl font-bold text-gray-900 mb-2">
+        <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          Vibe Todo
+        </span>
+      </h1>
+      <p class="text-gray-600 text-lg">Stay organized and productive with style</p>
       
-      @if (todos().length === 0) {
-        <div class="text-center py-8 text-gray-500">
-          <p>No todos yet. Add one to get started!</p>
-        </div>
-      } @else {
-        <div class="space-y-2">
-          @for (todo of todos(); track todo.id) {
-            <div class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-              <input 
-                type="checkbox" 
-                [checked]="todo.completed"
-                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
-              />
-              <span 
-                class="flex-1"
-                [class.line-through]="todo.completed"
-                [class.text-gray-500]="todo.completed"
-              >
-                {{ todo.text }}
-              </span>
-              <span class="text-xs text-gray-400">
-                {{ todo.createdAt.toLocaleDateString() }}
-              </span>
-            </div>
-          }
+      <!-- Quick Stats -->
+      @if (stats().total > 0) {
+        <div class="mt-4 flex justify-center gap-6 text-sm">
+          <div class="text-gray-600">
+            <span class="font-semibold text-blue-600">{{ stats().total }}</span> total
+          </div>
+          <div class="text-gray-600">
+            <span class="font-semibold text-orange-600">{{ stats().active }}</span> active
+          </div>
+          <div class="text-gray-600">
+            <span class="font-semibold text-green-600">{{ stats().completed }}</span> completed
+          </div>
         </div>
       }
     </div>
     
-    <!-- Debug Info -->
-    <div class="mt-8 text-center text-sm text-gray-400">
-      <p>Phase 1 Complete: Foundation & Data Models ✅</p>
-      <p>Next: Todo Components & User Interaction</p>
+    <!-- Todo Input -->
+    <app-todo-input />
+    
+    <!-- Todo Filters -->
+    <app-todo-filter />
+    
+    <!-- Todo List -->
+    <div class="mt-6">
+      <app-todo-list />
+    </div>
+    
+    <!-- Footer -->
+    <div class="mt-12 text-center text-sm text-gray-500">
+      <p>Built with Angular 20 & Tailwind CSS 4.0</p>
+      <p class="mt-1">
+        <span class="inline-flex items-center">
+          Phase 2 Complete: Core Components 
+          <span class="ml-1 text-green-500">✅</span>
+        </span>
+      </p>
     </div>
   </div>
 </div>
