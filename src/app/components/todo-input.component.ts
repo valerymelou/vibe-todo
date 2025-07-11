@@ -10,7 +10,7 @@ import { TodoService } from '../services/todo.service';
     <div
       class="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 mb-6 border border-gray-200 dark:border-gray-700 transition-colors duration-300"
     >
-      <form (ngSubmit)="addTodo()" class="flex gap-4">
+      <form (ngSubmit)="addTodo()" class="flex flex-col md:flex-row gap-4">
         <input
           type="text"
           [(ngModel)]="newTodoText"

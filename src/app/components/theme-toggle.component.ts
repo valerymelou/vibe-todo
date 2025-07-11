@@ -7,9 +7,6 @@ import { ThemeService, Theme } from '../services/theme.service';
   imports: [],
   template: `
     <div class="flex items-center gap-2">
-      <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
-        Theme:
-      </label>
       <div class="flex bg-gray-100 dark:bg-gray-700 rounded-lg p-1">
         @for (option of themeOptions; track option.value) {
         <button

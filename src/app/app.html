@@ -4,11 +4,13 @@
 >
   <div class="max-w-4xl mx-auto px-4">
     <!-- Header -->
-    <div class="text-center mb-8">
-      <div class="flex justify-between items-start mb-6">
-        <div></div>
-        <!-- Spacer -->
-        <div>
+    <div class="relative text-center mb-8">
+      <!-- Theme Toggle in Top Right Corner -->
+      <div class="flex items-center justify-center flex-col">
+        <app-theme-toggle class="mb-4" />
+
+        <!-- Centered Title and Subtitle -->
+        <div class="mb-6">
           <h1 class="text-5xl font-bold text-gray-900 dark:text-white mb-2">
             <span
               class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
@@ -20,7 +22,6 @@
             Stay organized and productive with style
           </p>
         </div>
-        <app-theme-toggle class="mt-2" />
       </div>
 
       <!-- Quick Stats -->
@@ -77,36 +78,32 @@
     <!-- Footer -->
     <div class="mt-12 text-center text-sm text-gray-500 dark:text-gray-400">
       <p>Built with Angular 20 & Tailwind CSS 4.0</p>
-      <p class="mt-1">
-        <span class="inline-flex items-center">
-          Phase 3 Complete: Enhanced Features & Polish
-          <span class="ml-1 text-green-500">✅</span>
-        </span>
-      </p>
-      <div class="mt-2 flex justify-center gap-4 text-xs">
+      <div class="mt-2 flex justify-center gap-1 lg:gap-4 text-xs">
         <span>Dark Mode Support</span>
         <span>•</span>
         <span>Smooth Animations</span>
         <span>•</span>
         <span>Enhanced UX</span>
       </div>
-      
+
       <!-- Attribution -->
-      <div class="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700 text-xs">
+      <div
+        class="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700 text-xs"
+      >
         <p class="text-gray-400 dark:text-gray-500">
-          Built by 
-          <a 
-            href="https://github.com/features/copilot" 
-            target="_blank" 
+          Built by
+          <a
+            href="https://github.com/features/copilot"
+            target="_blank"
             rel="noopener noreferrer"
             class="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 transition-colors underline"
           >
             GitHub Copilot
           </a>
-          using 
-          <a 
-            href="https://claude.ai" 
-            target="_blank" 
+          using
+          <a
+            href="https://claude.ai"
+            target="_blank"
             rel="noopener noreferrer"
             class="text-purple-500 hover:text-purple-600 dark:text-purple-400 dark:hover:text-purple-300 transition-colors underline"
           >
@@ -114,10 +111,10 @@
           </a>
         </p>
         <p class="mt-1 text-gray-400 dark:text-gray-500">
-          Under the supervision of 
-          <a 
-            href="https://twitter.com/valerymelou" 
-            target="_blank" 
+          Under the supervision of
+          <a
+            href="https://twitter.com/valerymelou"
+            target="_blank"
             rel="noopener noreferrer"
             class="text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-100 transition-colors underline font-medium"
           >
