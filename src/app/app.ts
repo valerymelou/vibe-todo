@@ -12,16 +12,16 @@ import { ThemeToggleComponent } from './components/theme-toggle.component';
     TodoInputComponent,
     TodoListComponent,
     TodoFilterComponent,
-    ThemeToggleComponent
+    ThemeToggleComponent,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
 export class App implements OnInit {
   private todoService = inject(TodoService);
-  
+
   readonly stats = this.todoService.stats;
-  
+
   ngOnInit() {
     // Add some test data if no todos exist (only on first visit)
     if (this.todoService.todos().length === 0) {
@@ -29,8 +29,10 @@ export class App implements OnInit {
       this.todoService.addTodo({ text: 'Try dark mode with the toggle above' });
       this.todoService.addTodo({ text: 'Double-click to edit this todo' });
       this.todoService.addTodo({ text: 'Check off completed tasks' });
-      this.todoService.addTodo({ text: 'Try the filter buttons and animations' });
-      
+      this.todoService.addTodo({
+        text: 'Try the filter buttons and animations',
+      });
+
       // Mark one as completed for demo
       const todos = this.todoService.todos();
       if (todos.length > 0) {

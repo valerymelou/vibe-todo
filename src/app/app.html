@@ -1,57 +1,79 @@
 <!-- Main Todo App Container -->
-<div class="min-h-screen bg-gray-50 dark:bg-gray-900 py-8 transition-colors duration-300">
+<div
+  class="min-h-screen bg-gray-50 dark:bg-gray-900 py-8 transition-colors duration-300"
+>
   <div class="max-w-4xl mx-auto px-4">
     <!-- Header -->
     <div class="text-center mb-8">
       <div class="flex justify-between items-start mb-6">
-        <div></div> <!-- Spacer -->
+        <div></div>
+        <!-- Spacer -->
         <div>
           <h1 class="text-5xl font-bold text-gray-900 dark:text-white mb-2">
-            <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span
+              class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+            >
               Vibe Todo
             </span>
           </h1>
-          <p class="text-gray-600 dark:text-gray-300 text-lg">Stay organized and productive with style</p>
+          <p class="text-gray-600 dark:text-gray-300 text-lg">
+            Stay organized and productive with style
+          </p>
         </div>
         <app-theme-toggle class="mt-2" />
       </div>
-      
+
       <!-- Quick Stats -->
       @if (stats().total > 0) {
-        <div class="flex justify-center gap-6 text-sm">
-          <div class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
-            <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
-            <span class="text-gray-600 dark:text-gray-300">
-              <span class="font-semibold text-blue-600 dark:text-blue-400">{{ stats().total }}</span> total
-            </span>
-          </div>
-          <div class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
-            <div class="w-2 h-2 bg-orange-500 rounded-full"></div>
-            <span class="text-gray-600 dark:text-gray-300">
-              <span class="font-semibold text-orange-600 dark:text-orange-400">{{ stats().active }}</span> active
-            </span>
-          </div>
-          <div class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
-            <div class="w-2 h-2 bg-green-500 rounded-full"></div>
-            <span class="text-gray-600 dark:text-gray-300">
-              <span class="font-semibold text-green-600 dark:text-green-400">{{ stats().completed }}</span> completed
-            </span>
-          </div>
+      <div class="flex justify-center gap-6 text-sm">
+        <div
+          class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 rounded-lg shadow-sm"
+        >
+          <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+          <span class="text-gray-600 dark:text-gray-300">
+            <span class="font-semibold text-blue-600 dark:text-blue-400">{{
+              stats().total
+            }}</span>
+            total
+          </span>
         </div>
+        <div
+          class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 rounded-lg shadow-sm"
+        >
+          <div class="w-2 h-2 bg-orange-500 rounded-full"></div>
+          <span class="text-gray-600 dark:text-gray-300">
+            <span class="font-semibold text-orange-600 dark:text-orange-400">{{
+              stats().active
+            }}</span>
+            active
+          </span>
+        </div>
+        <div
+          class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 rounded-lg shadow-sm"
+        >
+          <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+          <span class="text-gray-600 dark:text-gray-300">
+            <span class="font-semibold text-green-600 dark:text-green-400">{{
+              stats().completed
+            }}</span>
+            completed
+          </span>
+        </div>
+      </div>
       }
     </div>
-    
+
     <!-- Todo Input -->
     <app-todo-input />
-    
+
     <!-- Todo Filters -->
     <app-todo-filter />
-    
+
     <!-- Todo List -->
     <div class="mt-6">
       <app-todo-list />
     </div>
-    
+
     <!-- Footer -->
     <div class="mt-12 text-center text-sm text-gray-500 dark:text-gray-400">
       <p>Built with Angular 20 & Tailwind CSS 4.0</p>
