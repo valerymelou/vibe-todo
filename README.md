@@ -1,59 +1,140 @@
-# VibeTodoApp
+# 🎯 Vibe Todo App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.4.
+A modern, feature-rich todo application built with Angular 20 and Tailwind CSS 4.0.
 
-## Development server
+## ✨ Features
 
-To start a local development server, run:
+- **Modern Angular 20** with zoneless architecture
+- **Standalone components** (no NgModules)
+- **Signals-based state management** for reactive updates
+- **Tailwind CSS 4.0** for styling
+- **Dark mode support** with system preference detection
+- **Smooth animations** and micro-interactions
+- **Local storage persistence** - your todos survive page refreshes
+- **Responsive design** - works on all devices
+- **Full accessibility** - keyboard navigation and screen reader support
 
-```bash
-ng serve
-```
+## 🚀 Todo Features
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- ✅ Add new todos with form validation
+- ✅ Edit todos inline (double-click to edit)
+- ✅ Delete todos with smooth animations
+- ✅ Toggle completion status
+- ✅ Filter todos (All, Active, Completed)
+- ✅ Bulk actions (Check All, Clear Completed)
+- ✅ Progress tracking with visual progress bar
+- ✅ Statistics and counters
+- ✅ Theme toggle (Light/Dark/System)
 
-## Code scaffolding
+## 🛠️ Technologies Used
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- **Angular 20** - Latest version with zoneless architecture
+- **Tailwind CSS 4.0** - Latest utility-first CSS framework
+- **TypeScript** - Type-safe development
+- **RxJS** - Reactive programming
+- **Yarn** - Package manager
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## 📦 Installation
 
 ```bash
-ng test
+# Clone the repository
+git clone https://github.com/yourusername/vibe-todo.git
+cd vibe-todo
+
+# Install dependencies
+yarn install
+
+# Start development server
+yarn start
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+## 🎮 Development
 
 ```bash
-ng e2e
+# Development server
+yarn start
+
+# Build for production
+yarn build:prod
+
+# Run tests
+yarn test
+
+# Deploy to GitHub Pages
+yarn deploy
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 🚀 Deployment
 
-## Additional Resources
+### GitHub Pages
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. **Create a GitHub repository** and push your code
+2. **Configure base href** in the deploy script (already set up)
+3. **Deploy with one command**:
+   ```bash
+   yarn deploy
+   ```
+
+The app will be available at `https://yourusername.github.io/vibe-todo/`
+
+### Manual Deployment
+
+1. Build for production:
+   ```bash
+   yarn build:prod
+   ```
+
+2. Deploy the `dist/vibe-todo-app/browser/` directory to your hosting service
+
+## 🎨 Architecture
+
+- **Signals** for reactive state management
+- **Standalone components** for modern Angular architecture
+- **Dependency injection** with `inject()` function
+- **New control flow** syntax (`@if`, `@for`, `@switch`)
+- **Service-based architecture** for business logic
+- **TypeScript interfaces** for type safety
+
+## 🌙 Dark Mode
+
+The app supports three theme modes:
+- **Light** - Traditional light theme
+- **Dark** - Dark theme for low-light environments
+- **System** - Automatically follows your system preference
+
+## 📱 Responsive Design
+
+The app is fully responsive and works beautifully on:
+- 📱 Mobile devices
+- 📱 Tablets
+- 💻 Desktop computers
+
+## ♿ Accessibility
+
+- Full keyboard navigation support
+- Screen reader compatible
+- ARIA labels and roles
+- Focus management
+- High contrast support
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+## 🙏 Acknowledgments
+
+- Built with Angular 20 and Tailwind CSS 4.0
+- Inspired by modern todo app designs
+- Uses the latest web development best practices
+
+---
+
+**Made with ❤️ using Angular 20 & Tailwind CSS 4.0**

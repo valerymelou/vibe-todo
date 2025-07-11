@@ -5,8 +5,11 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "ng build --configuration production && npx angular-cli-ghpages --dir=dist/vibe-todo-app/browser",
+    "deploy:ci": "ng build --configuration production --base-href='/vibe-todo/' && npx angular-cli-ghpages --dir=dist/vibe-todo-app/browser"
   },
   "prettier": {
     "overrides": [
@@ -35,6 +38,7 @@
     "@angular/compiler-cli": "^20.0.0",
     "@tailwindcss/postcss": "^4.1.11",
     "@types/jasmine": "~5.1.0",
+    "angular-cli-ghpages": "^2.0.3",
     "jasmine-core": "~5.7.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
